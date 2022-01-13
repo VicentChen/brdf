@@ -9,9 +9,10 @@ isEmpty(prefix) {
 }
 
 DEST = $$prefix
-isEmpty(LIBDIR) {
-	LIBDIR = $$system(pf-makevar lib 2>/dev/null)
-}
+# Don't know what it means??
+# isEmpty(LIBDIR) {
+# 	LIBDIR = $$system(pf-makevar lib 2>/dev/null)
+# }
 isEmpty(LIBDIR) {
 	LIBDIR = lib
 }
@@ -86,9 +87,9 @@ pkgconfig.files = brdf.pc
 INSTALLS = target brdfs data images probes shaderTemplates pkgconfig
 
 win32-msvc*{
-    INCLUDEPATH += ZLIB_DIR
+    INCLUDEPATH += ../../external/include/ # ZLIB_DIR
     DEFINES += ZLIB_WINAPI
-    LIBS += ZLIB_LIB
+    LIBS += ../../external/lib/zlibstatic.lib # ZLIB_LIB
 }
 
 win32-g++*{

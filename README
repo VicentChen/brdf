@@ -1,3 +1,5 @@
+(Please refer to REAMD-CMAKE.md for modern compilation.)
+
 The Disney BRDF Explorer is an application that allows the development and analysis
 of bidirectional reflectance distribution functions (BRDFs). It can load and plot 
 analytic BRDF functions (coded as snippets of OpenGL GLSL programs), measured
